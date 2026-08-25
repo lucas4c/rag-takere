@@ -21,7 +21,7 @@ export class RagEngineWeInfer {
   }
   
   async initialize(): Promise<void> {
-    console.log('🚀 [WeInfer] Initializing WebPizza RAG Engine with WeInfer...');
+    console.log('🚀 [WeInfer] Initializing RAG Engine with WeInfer...');
     
     // Initialize in sequence to show progress better
     console.log('1/3: [WeInfer] Initializing LLM with WeInfer optimizations...');

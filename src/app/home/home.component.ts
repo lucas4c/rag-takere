@@ -216,7 +216,7 @@ export class HomeComponent implements OnInit {
     this.scrollToBottom();
 
     try {
-      await this.rag.query(
+      const result = await this.rag.query(
         currentQuestion,
         (partialAnswer: string) => {
           if (this.shouldStopGeneration) {
@@ -232,6 +232,15 @@ export class HomeComponent implements OnInit {
         this.ENABLE_HYBRID_SEARCH,
         this.ENABLE_SOURCE_CITATIONS
       );
+
+      // Caso o RAG tenha bloqueado a pergunta
+      // e retornado a mensagem padrão
+      if (result) {
+        this.answer = result;
+        this.chatMessages[assistantIndex].content = result;
+        this.cdr.detectChanges();
+        this.scrollToBottom();
+      }
 
       if (this.ENABLE_CONVERSATIONAL_MEMORY && this.answer) {
         this.conversationHistory.push({
