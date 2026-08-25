@@ -20,7 +20,7 @@ export class VectorStore {
   
   async initialize(): Promise<void> {
     return new Promise<void>((resolve, reject) => {
-      const request = indexedDB.open('webpizza-vectors', 1);
+      const request = indexedDB.open('takere-db', 1);
       request.onupgradeneeded = (e) => {
         const db = (e.target as IDBOpenDBRequest).result;
         if (!db.objectStoreNames.contains('chunks')) {
