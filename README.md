@@ -571,56 +571,6 @@ Na primeira execução, o navegador poderá precisar baixar os modelos utilizado
 
 ---
 
-# 12. Build de produção
-
-Para gerar o build:
-
-```bash
-npm run build
-```
-
-O script executa:
-
-```text
-ng build
-```
-
-e, após o build, executa automaticamente:
-
-```text
-node scripts/generate-version.js
-```
-
-através do `postbuild`.
-
-Os artefatos gerados pelo Angular ficam no diretório de distribuição configurado pelo projeto.
-
----
-
-# 13. Testes
-
-O projeto possui testes utilizando:
-
-* Jasmine;
-* Karma;
-* Angular testing utilities.
-
-O comando disponível é:
-
-```bash
-npm test
-```
-
-O repositório possui testes associados a serviços como:
-
-* `Embedder`;
-* `LlmClient`;
-* `PdfParser`;
-* `RagEngine`;
-* `VectorStore`.
-
----
-
 # 14. Estado atual e próximos passos
 
 O projeto já possui os principais componentes do protótipo funcional:
