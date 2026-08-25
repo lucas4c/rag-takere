@@ -176,7 +176,7 @@ A base vetorial é armazenada localmente utilizando **IndexedDB**.
 O serviço `VectorStore` cria um banco chamado:
 
 ```text
-webpizza-vectors
+takere-db
 ```
 
 com um object store chamado:
