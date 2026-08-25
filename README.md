@@ -340,13 +340,6 @@ cosineSimilarity(queryEmbedding, chunkEmbedding)
 
 e retorna os chunks com maior similaridade.
 
-Também existe uma opção de busca híbrida, combinando:
-
-```text
-70% similaridade semântica
-30% similaridade por palavras-chave
-```
-
 ---
 
 ## `PdfParser`
