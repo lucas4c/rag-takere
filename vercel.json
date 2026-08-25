@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm install --omit=optional && npm run build",
-  "outputDirectory": "dist/webpizza-poc/browser",
+  "outputDirectory": "dist/takere-vercel/browser",
   "framework": "angular",
   "rewrites": [
     {
